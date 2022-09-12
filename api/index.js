@@ -23,6 +23,10 @@ mongoose.connection.on("connected", ()=>{
     console.log("MongoDB connected")
 })
 
+app.get("/", (req, res)=>{
+  res.send("hello first request")
+})
+
 app.listen(8000, ()=>{
     connect()
     console.log("connected")
